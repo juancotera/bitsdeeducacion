@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# Bits de Educación
+Este proyecto nace de la necesidad de tener una comunidad de docente de educación básica regular,
+donde podamos apoyarnos en cuanto al uso de la tecnología, viendo mucho esta necesidad en su mayoría.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Sobre este proyecto
+Tenemos un proyecto desarrollado en react, usando vite como manejador de paquetes y CSS puro para los estilos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tenemos la siguiente estructura de nuestra carpetas.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```csharp
+mi-proyecto/
+│── public/               # Archivos estáticos (favicon, imágenes globales, etc.)
+│── src/
+│   ├── assets/           # Recursos estáticos (imágenes, fuentes, etc.)
+│   │   ├── images/
+│   │   ├── fonts/
+│   │   ├── styles/       # Estilos globales
+│   │   │   ├── reset.css # Reseteo de estilos
+│   │   │   ├── global.css # Estilos generales
+│   │   │   ├── variables.css # Variables CSS si las usas
+│   │   │   ├── themes/   # Temas opcionales si aplicas dark/light mode
+│   ├── components/       # Componentes reutilizables
+│   │   ├── Button/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Button.css
+│   │   ├── Card/
+│   │   │   ├── Card.jsx
+│   │   │   ├── Card.css
+│   ├── pages/            # Páginas principales
+│   │   ├── Home/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Home.css
+│   │   ├── About/
+│   │   │   ├── About.jsx
+│   │   │   ├── About.css
+│   ├── hooks/            # Custom Hooks (si los usas)
+│   ├── context/          # Context API (si lo usas)
+│   ├── services/         # Llamadas a APIs u otras funciones auxiliares
+│   ├── utils/            # Funciones de utilidad
+│   ├── App.jsx           # Componente principal
+│   ├── index.js          # Punto de entrada
+│── package.json
+│── .gitignore
+│── README.md
 ```
